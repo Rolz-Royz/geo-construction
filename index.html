@@ -4,11 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Geo Construction LLC | Asphalt & Concrete Paving in Orem, Provo & Lehi, Utah</title>
-  <meta name="description" content="Geo Construction LLC — asphalt and concrete paving for driveways, sidewalks, patios, parking lots, sealcoating and repairs in Orem, Provo, Lehi and all of Utah County. Free estimates.">
+  <meta name="description" content="Geo Construction LLC — asphalt and concrete paving for driveways, sidewalks, patios, parking lots, sealcoating and repairs in Orem, Provo, Lehi and all of Utah County. Free estimates. Hablamos español.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    // Pick language before first paint to avoid a flash of the wrong language.
+    (function () {
+      var q = new URLSearchParams(location.search).get('lang');
+      var saved = null;
+      try { saved = localStorage.getItem('geo-lang'); } catch (e) {}
+      var lang = q === 'es' || q === 'en' ? q : saved || ((navigator.language || '').toLowerCase().indexOf('es') === 0 ? 'es' : 'en');
+      document.documentElement.lang = lang;
+    })();
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -16,6 +26,7 @@
     "name": "Geo Construction LLC",
     "description": "Asphalt and concrete paving contractor serving Utah County.",
     "telephone": "+1-801-555-0199",
+    "knowsLanguage": ["en", "es"],
     "areaServed": ["Orem, UT", "Provo, UT", "Lehi, UT", "American Fork, UT", "Pleasant Grove, UT", "Lindon, UT", "Springville, UT", "Spanish Fork, UT", "Saratoga Springs, UT", "Eagle Mountain, UT"],
     "address": { "@type": "PostalAddress", "addressRegion": "UT", "addressCountry": "US" }
   }
@@ -34,19 +45,23 @@
       </a>
       <nav class="nav" aria-label="Main">
         <ul class="nav__list" id="navList">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#areas">Service Areas</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="#process" data-i18n="nav.process">Process</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#areas" data-i18n="nav.areas">Service Areas</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
         </ul>
       </nav>
       <div class="header__cta">
+        <div class="lang" role="group" aria-label="Language / Idioma">
+          <button type="button" class="lang__btn" data-lang="en" lang="en">EN</button>
+          <button type="button" class="lang__btn" data-lang="es" lang="es">ES</button>
+        </div>
         <a href="tel:+18015550199" class="header__phone">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" fill="currentColor"/></svg>
           (801) 555-0199
         </a>
-        <a href="#quote" class="btn btn--yellow btn--sm">Free Estimate</a>
+        <a href="#quote" class="btn btn--yellow btn--sm" data-i18n="cta.estimate">Free Estimate</a>
         <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -58,41 +73,41 @@
       <div class="hero__road" aria-hidden="true"><div class="hero__line"></div></div>
       <div class="container hero__inner">
         <div class="hero__copy">
-          <p class="eyebrow"><span class="dot"></span> Utah County Paving Contractor</p>
-          <h1 class="hero__title">Paving built for <span class="hl">Utah winters.</span></h1>
-          <p class="hero__lead">Asphalt and concrete driveways, sidewalks, patios and parking lots — installed on a properly compacted base so they hold up to freeze-thaw, snowplows and road salt year after year.</p>
+          <p class="eyebrow"><span class="dot"></span> <span data-i18n="hero.eyebrow">Utah County Paving Contractor</span></p>
+          <h1 class="hero__title" data-i18n="hero.title">Paving built for <span class="hl">Utah winters.</span></h1>
+          <p class="hero__lead" data-i18n="hero.lead">Asphalt and concrete driveways, sidewalks, patios and parking lots — installed on a properly compacted base so they hold up to freeze-thaw, snowplows and road salt year after year.</p>
           <div class="hero__actions">
-            <a href="#quote" class="btn btn--yellow">Get a Free Estimate
+            <a href="#quote" class="btn btn--yellow"><span data-i18n="cta.getEstimate">Get a Free Estimate</span>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a href="#services" class="btn btn--ghost">View Services</a>
+            <a href="#services" class="btn btn--ghost" data-i18n="cta.viewServices">View Services</a>
           </div>
           <ul class="hero__badges">
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Licensed &amp; Insured</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Residential &amp; Commercial</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Hablamos Español</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="badge.licensed">Licensed &amp; Insured</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="badge.resCom">Residential &amp; Commercial</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="badge.lang">Hablamos Español</span></li>
           </ul>
         </div>
 
         <!-- Pavement cross-section -->
         <figure class="section-cut" aria-label="Cross-section of a properly built driveway">
           <figcaption class="section-cut__title">
-            <span>What's under a Geo driveway</span>
-            <span class="section-cut__tag">CROSS-SECTION</span>
+            <span data-i18n="cut.title">What's under a Geo driveway</span>
+            <span class="section-cut__tag" data-i18n="cut.tag">CROSS-SECTION</span>
           </figcaption>
           <div class="layers">
-            <div class="layer layer--surface"><span class="layer__label"><b>01</b> Hot-mix asphalt / concrete surface</span><span class="layer__depth">3–4"</span></div>
-            <div class="layer layer--base"><span class="layer__label"><b>02</b> Compacted road base gravel</span><span class="layer__depth">6–8"</span></div>
-            <div class="layer layer--grade"><span class="layer__label"><b>03</b> Graded &amp; sloped subgrade for drainage</span><span class="layer__depth">prep</span></div>
+            <div class="layer layer--surface"><span class="layer__label"><b>01</b> <span data-i18n="cut.l1">Hot-mix asphalt / concrete surface</span></span><span class="layer__depth">3–4"</span></div>
+            <div class="layer layer--base"><span class="layer__label"><b>02</b> <span data-i18n="cut.l2">Compacted road base gravel</span></span><span class="layer__depth">6–8"</span></div>
+            <div class="layer layer--grade"><span class="layer__label"><b>03</b> <span data-i18n="cut.l3">Graded &amp; sloped subgrade for drainage</span></span><span class="layer__depth" data-i18n="cut.prep">prep</span></div>
           </div>
-          <p class="section-cut__note">Most early pavement failures start below the surface. We dig, grade and compact before a single ton of asphalt goes down.</p>
+          <p class="section-cut__note" data-i18n="cut.note">Most early pavement failures start below the surface. We dig, grade and compact before a single ton of asphalt goes down.</p>
         </figure>
       </div>
     </section>
 
     <!-- ============ HAZARD STRIP / MARQUEE ============ -->
     <div class="strip" aria-hidden="true">
-      <div class="strip__track">
+      <div class="strip__track" data-i18n="strip">
         <span>Asphalt Paving</span><i>◆</i><span>Concrete Driveways</span><i>◆</i><span>Sidewalks</span><i>◆</i><span>Sealcoating</span><i>◆</i><span>Crack Sealing</span><i>◆</i><span>Parking Lots</span><i>◆</i><span>Line Striping</span><i>◆</i><span>Curb &amp; Gutter</span><i>◆</i>
         <span>Asphalt Paving</span><i>◆</i><span>Concrete Driveways</span><i>◆</i><span>Sidewalks</span><i>◆</i><span>Sealcoating</span><i>◆</i><span>Crack Sealing</span><i>◆</i><span>Parking Lots</span><i>◆</i><span>Line Striping</span><i>◆</i><span>Curb &amp; Gutter</span><i>◆</i>
       </div>
@@ -102,72 +117,72 @@
     <section class="services" id="services">
       <div class="container">
         <div class="section-head">
-          <p class="kicker">Our Services</p>
-          <h2>Every surface you drive, park or walk on.</h2>
-          <p class="section-head__sub">From a single residential driveway to a full commercial lot — one crew handles the excavation, base, paving and finishing.</p>
+          <p class="kicker" data-i18n="svc.kicker">Our Services</p>
+          <h2 data-i18n="svc.title">Every surface you drive, park or walk on.</h2>
+          <p class="section-head__sub" data-i18n="svc.sub">From a single residential driveway to a full commercial lot — one crew handles the excavation, base, paving and finishing.</p>
         </div>
 
         <div class="svc-grid">
           <article class="svc svc--feature svc--asphalt reveal">
             <div class="svc__num">01</div>
-            <h3>Asphalt Driveways</h3>
-            <p>New installs, full replacements and overlays. Hot-mix asphalt laid and rolled over a compacted base — a smooth, flexible surface that handles Utah's temperature swings.</p>
-            <ul class="svc__list"><li>New construction</li><li>Tear-out &amp; replace</li><li>Overlays &amp; extensions</li></ul>
+            <h3 data-i18n="svc.asphalt.t">Asphalt Driveways</h3>
+            <p data-i18n="svc.asphalt.d">New installs, full replacements and overlays. Hot-mix asphalt laid and rolled over a compacted base — a smooth, flexible surface that handles Utah's temperature swings.</p>
+            <ul class="svc__list" data-i18n="svc.asphalt.l"><li>New construction</li><li>Tear-out &amp; replace</li><li>Overlays &amp; extensions</li></ul>
           </article>
 
           <article class="svc svc--feature svc--concrete reveal">
             <div class="svc__num">02</div>
-            <h3>Concrete Driveways</h3>
-            <p>Reinforced concrete with proper control joints and a broom finish for traction. Air-entrained mixes built to resist freeze-thaw cracking and de-icing salt.</p>
-            <ul class="svc__list"><li>Broom &amp; exposed aggregate</li><li>RV pads &amp; parking pads</li><li>Approaches &amp; aprons</li></ul>
+            <h3 data-i18n="svc.concrete.t">Concrete Driveways</h3>
+            <p data-i18n="svc.concrete.d">Reinforced concrete with proper control joints and a broom finish for traction. Air-entrained mixes built to resist freeze-thaw cracking and de-icing salt.</p>
+            <ul class="svc__list" data-i18n="svc.concrete.l"><li>Broom &amp; exposed aggregate</li><li>RV pads &amp; parking pads</li><li>Approaches &amp; aprons</li></ul>
           </article>
 
           <article class="svc reveal">
             <div class="svc__icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 40 L16 8 M42 40 L32 8 M24 12v6 M24 24v6 M24 36v4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div>
-            <h3>Sidewalks &amp; Walkways</h3>
-            <p>Concrete sidewalks, front walks and paths. Replacement of lifted or cracked panels that create trip hazards.</p>
+            <h3 data-i18n="svc.sidewalks.t">Sidewalks &amp; Walkways</h3>
+            <p data-i18n="svc.sidewalks.d">Concrete sidewalks, front walks and paths. Replacement of lifted or cracked panels that create trip hazards.</p>
           </article>
 
           <article class="svc reveal">
             <div class="svc__icon"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="2" fill="none" stroke="currentColor" stroke-width="3"/><path d="M6 18h36M6 30h36M18 6v12M30 18v12M18 30v12" fill="none" stroke="currentColor" stroke-width="3"/></svg></div>
-            <h3>Patios &amp; Stamped Concrete</h3>
-            <p>Backyard patios, pool decks and stamped or colored concrete that looks like stone or pavers — at a fraction of the cost.</p>
+            <h3 data-i18n="svc.patios.t">Patios &amp; Stamped Concrete</h3>
+            <p data-i18n="svc.patios.d">Backyard patios, pool decks and stamped or colored concrete that looks like stone or pavers — at a fraction of the cost.</p>
           </article>
 
           <article class="svc reveal">
             <div class="svc__icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 30c0-8 7-14 16-22 9 8 16 14 16 22a16 16 0 0 1-32 0z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M17 32a7 7 0 0 0 7 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div>
-            <h3>Sealcoating</h3>
-            <p>Protects asphalt from UV, water and oil. Restores that deep black finish and extends pavement life when applied every 2–3 years.</p>
+            <h3 data-i18n="svc.seal.t">Sealcoating</h3>
+            <p data-i18n="svc.seal.d">Protects asphalt from UV, water and oil. Restores that deep black finish and extends pavement life when applied every 2–3 years.</p>
           </article>
 
           <article class="svc reveal">
             <div class="svc__icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 24h8l4-8 6 16 5-12 3 4h10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <h3>Crack Sealing &amp; Repair</h3>
-            <p>Hot-pour crack filling, pothole patching and section repairs that stop water from getting under the surface and freezing.</p>
+            <h3 data-i18n="svc.crack.t">Crack Sealing &amp; Repair</h3>
+            <p data-i18n="svc.crack.d">Hot-pour crack filling, pothole patching and section repairs that stop water from getting under the surface and freezing.</p>
           </article>
 
           <article class="svc reveal">
             <div class="svc__icon"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="8" width="36" height="32" rx="2" fill="none" stroke="currentColor" stroke-width="3"/><path d="M16 8v14M24 8v14M32 8v14" fill="none" stroke="currentColor" stroke-width="3"/><text x="24" y="36" text-anchor="middle" font-size="11" font-weight="800" fill="currentColor" font-family="Barlow Condensed, sans-serif">P</text></svg></div>
-            <h3>Parking Lots</h3>
-            <p>Commercial paving for businesses, churches, HOAs and multi-family properties — new lots, resurfacing and maintenance plans.</p>
+            <h3 data-i18n="svc.lots.t">Parking Lots</h3>
+            <p data-i18n="svc.lots.d">Commercial paving for businesses, churches, HOAs and multi-family properties — new lots, resurfacing and maintenance plans.</p>
           </article>
 
           <article class="svc reveal">
             <div class="svc__icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 6v36M38 6v36" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M24 8v6M24 21v6M24 34v6" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg></div>
-            <h3>Line Striping</h3>
-            <p>Parking stalls, ADA spaces, fire lanes, arrows and curb painting — laid out clean and to code.</p>
+            <h3 data-i18n="svc.stripe.t">Line Striping</h3>
+            <p data-i18n="svc.stripe.d">Parking stalls, ADA spaces, fire lanes, arrows and curb painting — laid out clean and to code.</p>
           </article>
 
           <article class="svc reveal">
             <div class="svc__icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 18h14v10h26" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M4 26h10v8h30" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg></div>
-            <h3>Curb, Gutter &amp; ADA Ramps</h3>
-            <p>Concrete curb and gutter, driveway approaches and ADA-compliant ramps with detectable warning surfaces.</p>
+            <h3 data-i18n="svc.curb.t">Curb, Gutter &amp; ADA Ramps</h3>
+            <p data-i18n="svc.curb.d">Concrete curb and gutter, driveway approaches and ADA-compliant ramps with detectable warning surfaces.</p>
           </article>
 
           <article class="svc reveal">
             <div class="svc__icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 38h40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M8 38l10-14h12l8 14" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><circle cx="14" cy="14" r="4" fill="none" stroke="currentColor" stroke-width="3"/><path d="M18 14h14l6 10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div>
-            <h3>Grading &amp; Excavation</h3>
-            <p>Site prep, tear-out and haul-off, grading for drainage and road-base installation — the foundation of every job.</p>
+            <h3 data-i18n="svc.grade.t">Grading &amp; Excavation</h3>
+            <p data-i18n="svc.grade.d">Site prep, tear-out and haul-off, grading for drainage and road-base installation — the foundation of every job.</p>
           </article>
         </div>
       </div>
@@ -177,31 +192,31 @@
     <section class="compare">
       <div class="container">
         <div class="section-head section-head--light">
-          <p class="kicker">Not sure which to choose?</p>
-          <h2>Asphalt or concrete?</h2>
-          <p class="section-head__sub">Both are great choices in Utah. Here's the quick version — we'll give you an honest recommendation for your property during the estimate.</p>
+          <p class="kicker" data-i18n="cmp.kicker">Not sure which to choose?</p>
+          <h2 data-i18n="cmp.title">Asphalt or concrete?</h2>
+          <p class="section-head__sub" data-i18n="cmp.sub">Both are great choices in Utah. Here's the quick version — we'll give you an honest recommendation for your property during the estimate.</p>
         </div>
         <div class="compare__grid">
           <div class="compare__card compare__card--asphalt reveal">
             <div class="compare__swatch"></div>
-            <h3>Asphalt</h3>
+            <h3 data-i18n="cmp.asphalt">Asphalt</h3>
             <dl>
-              <div><dt>Upfront cost</dt><dd>Lower</dd></div>
-              <div><dt>Winter performance</dt><dd>Flexes with freeze-thaw; dark surface helps melt snow</dd></div>
-              <div><dt>Maintenance</dt><dd>Sealcoat every 2–3 years</dd></div>
-              <div><dt>Ready to drive</dt><dd>Usually 2–3 days</dd></div>
-              <div><dt>Best for</dt><dd>Long driveways, parking lots, budget-conscious projects</dd></div>
+              <div><dt data-i18n="cmp.cost">Upfront cost</dt><dd data-i18n="cmp.a.cost">Lower</dd></div>
+              <div><dt data-i18n="cmp.winter">Winter performance</dt><dd data-i18n="cmp.a.winter">Flexes with freeze-thaw; dark surface helps melt snow</dd></div>
+              <div><dt data-i18n="cmp.maint">Maintenance</dt><dd data-i18n="cmp.a.maint">Sealcoat every 2–3 years</dd></div>
+              <div><dt data-i18n="cmp.ready">Ready to drive</dt><dd data-i18n="cmp.a.ready">Usually 2–3 days</dd></div>
+              <div><dt data-i18n="cmp.best">Best for</dt><dd data-i18n="cmp.a.best">Long driveways, parking lots, budget-conscious projects</dd></div>
             </dl>
           </div>
           <div class="compare__card compare__card--concrete reveal">
             <div class="compare__swatch"></div>
-            <h3>Concrete</h3>
+            <h3 data-i18n="cmp.concrete">Concrete</h3>
             <dl>
-              <div><dt>Upfront cost</dt><dd>Higher</dd></div>
-              <div><dt>Winter performance</dt><dd>Very durable with air-entrained mix and proper sealing</dd></div>
-              <div><dt>Maintenance</dt><dd>Low — reseal periodically</dd></div>
-              <div><dt>Ready to drive</dt><dd>About 7 days</dd></div>
-              <div><dt>Best for</dt><dd>Sidewalks, patios, decorative finishes, long lifespan</dd></div>
+              <div><dt data-i18n="cmp.cost">Upfront cost</dt><dd data-i18n="cmp.c.cost">Higher</dd></div>
+              <div><dt data-i18n="cmp.winter">Winter performance</dt><dd data-i18n="cmp.c.winter">Very durable with air-entrained mix and proper sealing</dd></div>
+              <div><dt data-i18n="cmp.maint">Maintenance</dt><dd data-i18n="cmp.c.maint">Low — reseal periodically</dd></div>
+              <div><dt data-i18n="cmp.ready">Ready to drive</dt><dd data-i18n="cmp.c.ready">About 7 days</dd></div>
+              <div><dt data-i18n="cmp.best">Best for</dt><dd data-i18n="cmp.c.best">Sidewalks, patios, decorative finishes, long lifespan</dd></div>
             </dl>
           </div>
         </div>
@@ -212,29 +227,29 @@
     <section class="process" id="process">
       <div class="container">
         <div class="section-head">
-          <p class="kicker">How it works</p>
-          <h2>From estimate to open driveway.</h2>
+          <p class="kicker" data-i18n="proc.kicker">How it works</p>
+          <h2 data-i18n="proc.title">From estimate to open driveway.</h2>
         </div>
         <ol class="steps">
           <li class="step reveal">
             <span class="step__n">01</span>
-            <h3>Free On-Site Estimate</h3>
-            <p>We visit, measure, check drainage and soil conditions, and give you a clear written quote.</p>
+            <h3 data-i18n="proc.1.t">Free On-Site Estimate</h3>
+            <p data-i18n="proc.1.d">We visit, measure, check drainage and soil conditions, and give you a clear written quote.</p>
           </li>
           <li class="step reveal">
             <span class="step__n">02</span>
-            <h3>Excavate &amp; Prep</h3>
-            <p>Tear-out and haul-off of old material, grading for water runoff and a compacted gravel base.</p>
+            <h3 data-i18n="proc.2.t">Excavate &amp; Prep</h3>
+            <p data-i18n="proc.2.d">Tear-out and haul-off of old material, grading for water runoff and a compacted gravel base.</p>
           </li>
           <li class="step reveal">
             <span class="step__n">03</span>
-            <h3>Pave or Pour</h3>
-            <p>Hot-mix asphalt rolled smooth, or reinforced concrete finished with joints placed to control cracking.</p>
+            <h3 data-i18n="proc.3.t">Pave or Pour</h3>
+            <p data-i18n="proc.3.d">Hot-mix asphalt rolled smooth, or reinforced concrete finished with joints placed to control cracking.</p>
           </li>
           <li class="step reveal">
             <span class="step__n">04</span>
-            <h3>Walkthrough &amp; Care</h3>
-            <p>Final inspection together, cleanup, and simple care instructions so your surface lasts.</p>
+            <h3 data-i18n="proc.4.t">Walkthrough &amp; Care</h3>
+            <p data-i18n="proc.4.d">Final inspection together, cleanup, and simple care instructions so your surface lasts.</p>
           </li>
         </ol>
       </div>
@@ -245,18 +260,18 @@
       <div class="container">
         <div class="section-head section-head--row">
           <div>
-            <p class="kicker">Recent work</p>
-            <h2>Project gallery</h2>
+            <p class="kicker" data-i18n="proj.kicker">Recent work</p>
+            <h2 data-i18n="proj.title">Project gallery</h2>
           </div>
-          <a href="#quote" class="btn btn--dark">Start your project</a>
+          <a href="#quote" class="btn btn--dark" data-i18n="proj.cta">Start your project</a>
         </div>
         <!-- Replace each .tile background with a real project photo: style="background-image:url('img/project-1.jpg')" -->
         <div class="gallery">
-          <figure class="tile tile--a reveal"><figcaption><span>Asphalt Driveway</span>Orem, UT</figcaption></figure>
-          <figure class="tile tile--b reveal"><figcaption><span>Concrete Sidewalk</span>Provo, UT</figcaption></figure>
-          <figure class="tile tile--c reveal"><figcaption><span>Stamped Patio</span>Lehi, UT</figcaption></figure>
-          <figure class="tile tile--d reveal"><figcaption><span>Parking Lot Striping</span>American Fork, UT</figcaption></figure>
-          <figure class="tile tile--e reveal"><figcaption><span>Sealcoating</span>Pleasant Grove, UT</figcaption></figure>
+          <figure class="tile tile--a reveal"><figcaption><span data-i18n="proj.a">Asphalt Driveway</span>Orem, UT</figcaption></figure>
+          <figure class="tile tile--b reveal"><figcaption><span data-i18n="proj.b">Concrete Sidewalk</span>Provo, UT</figcaption></figure>
+          <figure class="tile tile--c reveal"><figcaption><span data-i18n="proj.c">Stamped Patio</span>Lehi, UT</figcaption></figure>
+          <figure class="tile tile--d reveal"><figcaption><span data-i18n="proj.d">Parking Lot Striping</span>American Fork, UT</figcaption></figure>
+          <figure class="tile tile--e reveal"><figcaption><span data-i18n="proj.e">Sealcoating</span>Pleasant Grove, UT</figcaption></figure>
         </div>
       </div>
     </section>
@@ -265,10 +280,10 @@
     <section class="areas" id="areas">
       <div class="container areas__inner">
         <div class="areas__copy">
-          <p class="kicker">Service Areas</p>
-          <h2>Local crews across Utah County &amp; beyond.</h2>
-          <p>Based in Utah Valley, we pave driveways and lots from Lehi down to Payson. Don't see your city? Call us — we likely cover it.</p>
-          <a href="tel:+18015550199" class="btn btn--yellow">Call (801) 555-0199</a>
+          <p class="kicker" data-i18n="areas.kicker">Service Areas</p>
+          <h2 data-i18n="areas.title">Local crews across Utah County &amp; beyond.</h2>
+          <p data-i18n="areas.sub">Based in Utah Valley, we pave driveways and lots from Lehi down to Payson. Don't see your city? Call us — we likely cover it.</p>
+          <a href="tel:+18015550199" class="btn btn--yellow"><span data-i18n="areas.call">Call</span>&nbsp;(801) 555-0199</a>
         </div>
         <ul class="areas__list">
           <li class="is-main">Orem</li>
@@ -297,33 +312,33 @@
     <section class="faq" id="faq">
       <div class="container faq__inner">
         <div class="section-head">
-          <p class="kicker">FAQ</p>
-          <h2>Common questions</h2>
+          <p class="kicker" data-i18n="faq.kicker">FAQ</p>
+          <h2 data-i18n="faq.title">Common questions</h2>
         </div>
         <div class="faq__list">
           <details class="qa">
-            <summary>How long does a new driveway last in Utah?</summary>
-            <p>With a properly compacted base and regular maintenance, an asphalt driveway typically lasts 15–20+ years and a concrete driveway 25–30+ years. Drainage and base prep make the biggest difference.</p>
+            <summary data-i18n="faq.1.q">How long does a new driveway last in Utah?</summary>
+            <p data-i18n="faq.1.a">With a properly compacted base and regular maintenance, an asphalt driveway typically lasts 15–20+ years and a concrete driveway 25–30+ years. Drainage and base prep make the biggest difference.</p>
           </details>
           <details class="qa">
-            <summary>When is the best time of year to pave?</summary>
-            <p>Asphalt and concrete are best installed when temperatures are consistently above about 50°F — generally spring through fall in Utah County. Repairs and estimates can be scheduled year-round.</p>
+            <summary data-i18n="faq.2.q">When is the best time of year to pave?</summary>
+            <p data-i18n="faq.2.a">Asphalt and concrete are best installed when temperatures are consistently above about 50°F — generally spring through fall in Utah County. Repairs and estimates can be scheduled year-round.</p>
           </details>
           <details class="qa">
-            <summary>How soon can I drive on my new driveway?</summary>
-            <p>Asphalt is usually ready for cars in 2–3 days (longer in hot weather). Concrete needs about 7 days before vehicle traffic; foot traffic is fine after 24–48 hours.</p>
+            <summary data-i18n="faq.3.q">How soon can I drive on my new driveway?</summary>
+            <p data-i18n="faq.3.a">Asphalt is usually ready for cars in 2–3 days (longer in hot weather). Concrete needs about 7 days before vehicle traffic; foot traffic is fine after 24–48 hours.</p>
           </details>
           <details class="qa">
-            <summary>How often should asphalt be sealcoated?</summary>
-            <p>Every 2–3 years. Wait at least 6–12 months after a new install so the asphalt can cure, then sealcoat to protect it from UV, water and oil.</p>
+            <summary data-i18n="faq.4.q">How often should asphalt be sealcoated?</summary>
+            <p data-i18n="faq.4.a">Every 2–3 years. Wait at least 6–12 months after a new install so the asphalt can cure, then sealcoat to protect it from UV, water and oil.</p>
           </details>
           <details class="qa">
-            <summary>Can you pave over my existing driveway?</summary>
-            <p>Sometimes. If the base is solid and damage is only on the surface, an overlay can save money. If there's heaving, sinking or widespread cracking, a full tear-out and replacement is the right call — we'll tell you honestly which one you need.</p>
+            <summary data-i18n="faq.5.q">Can you pave over my existing driveway?</summary>
+            <p data-i18n="faq.5.a">Sometimes. If the base is solid and damage is only on the surface, an overlay can save money. If there's heaving, sinking or widespread cracking, a full tear-out and replacement is the right call — we'll tell you honestly which one you need.</p>
           </details>
           <details class="qa">
-            <summary>Do you offer free estimates?</summary>
-            <p>Yes. We come to your property, measure the area and give you a written estimate at no cost. ¡También atendemos en español!</p>
+            <summary data-i18n="faq.6.q">Do you offer free estimates?</summary>
+            <p data-i18n="faq.6.a">Yes. We come to your property, measure the area and give you a written estimate at no cost. ¡También atendemos en español!</p>
           </details>
         </div>
       </div>
@@ -333,51 +348,60 @@
     <section class="quote" id="quote">
       <div class="container quote__inner">
         <div class="quote__copy">
-          <p class="kicker kicker--yellow">Free Estimate</p>
-          <h2>Let's pave something that lasts.</h2>
-          <p>Tell us about your project and we'll get back to you within one business day.</p>
+          <p class="kicker kicker--yellow" data-i18n="cta.estimate">Free Estimate</p>
+          <h2 data-i18n="quote.title">Let's pave something that lasts.</h2>
+          <p data-i18n="quote.sub">Tell us about your project and we'll get back to you within one business day.</p>
           <ul class="contact">
             <li>
               <span class="contact__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" fill="currentColor"/></svg></span>
-              <div><small>Call or text</small><a href="tel:+18015550199">(801) 555-0199</a></div>
+              <div><small data-i18n="quote.call">Call or text</small><a href="tel:+18015550199">(801) 555-0199</a></div>
             </li>
             <li>
               <span class="contact__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
-              <div><small>Email</small><a href="mailto:info@geoconstructionutah.com">info@geoconstructionutah.com</a></div>
+              <div><small data-i18n="quote.email">Email</small><a href="mailto:info@geoconstructionutah.com">info@geoconstructionutah.com</a></div>
             </li>
             <li>
               <span class="contact__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" fill="currentColor"/></svg></span>
-              <div><small>Serving</small><span>Orem · Provo · Lehi · Utah County</span></div>
+              <div><small data-i18n="quote.serving">Serving</small><span>Orem · Provo · Lehi · Utah County</span></div>
             </li>
           </ul>
         </div>
 
         <form class="form" id="quoteForm" novalidate>
           <div class="form__row">
-            <label>Name<input type="text" name="name" required autocomplete="name"></label>
-            <label>Phone<input type="tel" name="phone" required autocomplete="tel"></label>
+            <label><span data-i18n="form.name">Name</span><input type="text" name="name" required autocomplete="name"></label>
+            <label><span data-i18n="form.phone">Phone</span><input type="tel" name="phone" required autocomplete="tel"></label>
           </div>
-          <label>Email<input type="email" name="email" autocomplete="email"></label>
+          <label><span data-i18n="form.email">Email</span><input type="email" name="email" autocomplete="email"></label>
           <div class="form__row">
-            <label>City
+            <label><span data-i18n="form.city">City</span>
               <select name="city">
-                <option>Orem</option><option>Provo</option><option>Lehi</option><option>American Fork</option><option>Pleasant Grove</option><option>Springville</option><option>Spanish Fork</option><option>Saratoga Springs</option><option>Other</option>
+                <option>Orem</option><option>Provo</option><option>Lehi</option><option>American Fork</option><option>Pleasant Grove</option><option>Springville</option><option>Spanish Fork</option><option>Saratoga Springs</option><option value="Other" data-i18n="form.other">Other</option>
               </select>
             </label>
-            <label>Service
+            <label><span data-i18n="form.service">Service</span>
               <select name="service">
-                <option>Asphalt driveway</option><option>Concrete driveway</option><option>Sidewalk / walkway</option><option>Patio / stamped concrete</option><option>Sealcoating</option><option>Crack sealing / repair</option><option>Parking lot</option><option>Line striping</option><option>Curb &amp; gutter</option><option>Other</option>
+                <option value="Asphalt driveway" data-i18n="opt.asphalt">Asphalt driveway</option>
+                <option value="Concrete driveway" data-i18n="opt.concrete">Concrete driveway</option>
+                <option value="Sidewalk / walkway" data-i18n="opt.sidewalk">Sidewalk / walkway</option>
+                <option value="Patio / stamped concrete" data-i18n="opt.patio">Patio / stamped concrete</option>
+                <option value="Sealcoating" data-i18n="opt.seal">Sealcoating</option>
+                <option value="Crack sealing / repair" data-i18n="opt.crack">Crack sealing / repair</option>
+                <option value="Parking lot" data-i18n="opt.lot">Parking lot</option>
+                <option value="Line striping" data-i18n="opt.stripe">Line striping</option>
+                <option value="Curb &amp; gutter" data-i18n="opt.curb">Curb &amp; gutter</option>
+                <option value="Other" data-i18n="form.other">Other</option>
               </select>
             </label>
           </div>
           <fieldset class="chips">
-            <legend>Property type</legend>
-            <label class="chip"><input type="radio" name="type" value="Residential" checked><span>Residential</span></label>
-            <label class="chip"><input type="radio" name="type" value="Commercial"><span>Commercial</span></label>
-            <label class="chip"><input type="radio" name="type" value="HOA / Multi-family"><span>HOA / Multi-family</span></label>
+            <legend data-i18n="form.type">Property type</legend>
+            <label class="chip"><input type="radio" name="type" value="Residential" checked><span data-i18n="form.res">Residential</span></label>
+            <label class="chip"><input type="radio" name="type" value="Commercial"><span data-i18n="form.com">Commercial</span></label>
+            <label class="chip"><input type="radio" name="type" value="HOA / Multi-family"><span data-i18n="form.hoa">HOA / Multi-family</span></label>
           </fieldset>
-          <label>Project details<textarea name="details" rows="4" placeholder="Approximate size, current condition, timeline…"></textarea></label>
-          <button type="submit" class="btn btn--yellow btn--block">Request My Free Estimate</button>
+          <label><span data-i18n="form.details">Project details</span><textarea name="details" rows="4" placeholder="Approximate size, current condition, timeline…" data-i18n-placeholder="form.detailsPh"></textarea></label>
+          <button type="submit" class="btn btn--yellow btn--block" data-i18n="form.submit">Request My Free Estimate</button>
           <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -393,24 +417,24 @@
           <span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M4 32 L20 6 L36 32 Z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/><path d="M12 32 L20 19 L28 32" fill="currentColor"/></svg></span>
           <span class="logo__text">GEO<span>CONSTRUCTION</span></span>
         </a>
-        <p class="footer__tag">Asphalt &amp; concrete paving for Utah County homes and businesses.</p>
+        <p class="footer__tag" data-i18n="foot.tag">Asphalt &amp; concrete paving for Utah County homes and businesses.</p>
       </div>
       <div>
-        <h4>Services</h4>
-        <ul><li>Asphalt Driveways</li><li>Concrete Driveways</li><li>Sidewalks &amp; Patios</li><li>Sealcoating &amp; Repair</li><li>Parking Lots &amp; Striping</li></ul>
+        <h4 data-i18n="nav.services">Services</h4>
+        <ul data-i18n="foot.services"><li>Asphalt Driveways</li><li>Concrete Driveways</li><li>Sidewalks &amp; Patios</li><li>Sealcoating &amp; Repair</li><li>Parking Lots &amp; Striping</li></ul>
       </div>
       <div>
-        <h4>Areas</h4>
+        <h4 data-i18n="foot.areas">Areas</h4>
         <ul><li>Orem</li><li>Provo</li><li>Lehi</li><li>American Fork</li><li>Spanish Fork</li></ul>
       </div>
       <div>
-        <h4>Contact</h4>
-        <ul><li><a href="tel:+18015550199">(801) 555-0199</a></li><li><a href="mailto:info@geoconstructionutah.com">info@geoconstructionutah.com</a></li><li>Hablamos Español</li></ul>
+        <h4 data-i18n="foot.contact">Contact</h4>
+        <ul><li><a href="tel:+18015550199">(801) 555-0199</a></li><li><a href="mailto:info@geoconstructionutah.com">info@geoconstructionutah.com</a></li><li data-i18n="foot.lang">English &amp; Español</li></ul>
       </div>
     </div>
     <div class="container footer__bottom">
-      <span>© <span id="year"></span> Geo Construction LLC. All rights reserved.</span>
-      <span>Licensed &amp; insured in the State of Utah</span>
+      <span>© <span id="year"></span> Geo Construction LLC. <span data-i18n="foot.rights">All rights reserved.</span></span>
+      <span data-i18n="foot.licensed">Licensed &amp; insured in the State of Utah</span>
     </div>
   </footer>
 
@@ -418,6 +442,7 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" fill="currentColor"/></svg>
   </a>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
