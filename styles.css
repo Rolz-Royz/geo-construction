@@ -9,13 +9,13 @@
   --yellow: #e9b949;       /* road-paint amber (softer than pure yellow) */
   --yellow-dk: #b98a24;
   /* Orange family — lighter tones for text on dark, mid tones for fills */
-  --orange-200: #ffc49a;   /* peach: small labels on dark */
-  --orange-300: #ffa05c;   /* light orange: headlines on dark */
-  --orange-400: #ff8a3d;   /* tangerine: hazard stripes, icons */
-  --orange: #f57a26;       /* main fill: buttons, chips (white text) */
-  --orange-600: #e2661a;   /* accents on light backgrounds */
-  --orange-dk: #b9500f;    /* button shadow / pressed */
-  --orange-lt: #ff9147;    /* button hover */
+  --orange-200: #ffc9a3;   /* peach: small labels on dark */
+  --orange-300: #ff9a54;   /* light orange: headlines on dark */
+  --orange-400: #ff7b2e;   /* tangerine: hazard stripes, icons */
+  --orange: #f15c04;       /* brand orange, taken from the logo */
+  --orange-600: #d65104;    /* accents on light backgrounds */
+  --orange-dk: #a63f02;    /* button shadow / pressed */
+  --orange-lt: #ff7526;    /* button hover */
   --concrete: #e9e6df;
   --concrete-2: #d8d4cb;
   --paper: #f6f4ef;
@@ -37,7 +37,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
 body {
   margin: 0;
   font-family: var(--f-body);
@@ -88,12 +88,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   transition: background .3s;
 }
 .header.is-scrolled { background: rgba(20,20,20,.96); }
-.header__inner { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 24px; }
+.header__inner { display: flex; align-items: center; justify-content: space-between; height: 80px; gap: 24px; }
 
-.logo { display: flex; align-items: center; gap: 10px; color: #fff; }
-.logo__mark { width: 38px; height: 38px; color: var(--orange-400); }
-.logo__text { font-family: var(--f-display); font-weight: 800; font-size: 1.55rem; letter-spacing: .04em; line-height: 1; display: flex; flex-direction: column; }
-.logo__text span { font-size: .5em; font-weight: 600; letter-spacing: .32em; color: var(--muted-lt); margin-top: 2px; }
+.logo { display: flex; align-items: center; color: #fff; }
+.logo__img { height: 48px; width: auto; transition: transform .25s var(--ease); }
+.logo:hover .logo__img { transform: scale(1.03); }
+.logo--footer .logo__img { height: 78px; }
+.form__logo { height: 62px; width: auto; margin: 0 auto 4px; }
 
 .nav__list { display: flex; gap: 30px; }
 .nav__list a {
