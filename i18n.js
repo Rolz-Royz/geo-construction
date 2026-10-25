@@ -7,15 +7,16 @@ window.GEO_I18N = {
 
     'nav.services': 'Servicios',
     'nav.process': 'Proceso',
-    'nav.projects': 'Proyectos',
+    'nav.build': 'Cómo construimos',
+    'nav.call': 'Llamar',
     'nav.areas': 'Áreas',
     'nav.faq': 'Preguntas',
 
     'cta.estimate': 'Estimado Gratis',
     'cta.getEstimate': 'Pide tu Estimado Gratis',
     'cta.viewServices': 'Ver Servicios',
-
-    'hero.eyebrow': 'Contratista de pavimento en Utah County',
+    'cta.seeBuild': 'Mira cómo construimos',
+    'photo.tag': 'Foto ilustrativa',
     'hero.title': 'Pavimento hecho para <span class="hl">el invierno de Utah.</span>',
     'hero.lead': 'Driveways, aceras, patios y estacionamientos de asfalto y concreto — instalados sobre una base bien compactada para aguantar congelamiento, quitanieves y sal año tras año.',
 
@@ -24,7 +25,6 @@ window.GEO_I18N = {
     'badge.lang': 'Atendemos en inglés y español',
 
     'cut.title': 'Lo que hay debajo de un driveway Geo',
-    'cut.tag': 'CORTE',
     'cut.l1': 'Superficie de asfalto caliente / concreto',
     'cut.l2': 'Grava de base compactada',
     'cut.l3': 'Terreno nivelado con pendiente para drenaje',
@@ -33,8 +33,6 @@ window.GEO_I18N = {
 
     'strip': '<span>Pavimento de Asfalto</span><i>◆</i><span>Driveways de Concreto</span><i>◆</i><span>Aceras</span><i>◆</i><span>Sellado de Asfalto</span><i>◆</i><span>Sellado de Grietas</span><i>◆</i><span>Estacionamientos</span><i>◆</i><span>Pintura de Líneas</span><i>◆</i><span>Bordillos y Cunetas</span><i>◆</i>' +
              '<span>Pavimento de Asfalto</span><i>◆</i><span>Driveways de Concreto</span><i>◆</i><span>Aceras</span><i>◆</i><span>Sellado de Asfalto</span><i>◆</i><span>Sellado de Grietas</span><i>◆</i><span>Estacionamientos</span><i>◆</i><span>Pintura de Líneas</span><i>◆</i><span>Bordillos y Cunetas</span><i>◆</i>',
-
-    'svc.kicker': 'Nuestros Servicios',
     'svc.title': 'Toda superficie donde manejas, estacionas o caminas.',
     'svc.sub': 'Desde un driveway residencial hasta un estacionamiento comercial completo — un solo equipo se encarga de la excavación, la base, el pavimento y los acabados.',
     'svc.asphalt.t': 'Driveways de Asfalto',
@@ -59,8 +57,6 @@ window.GEO_I18N = {
     'svc.curb.d': 'Bordillos y cunetas de concreto, entradas de driveway y rampas ADA con superficie táctil de advertencia.',
     'svc.grade.t': 'Nivelación y Excavación',
     'svc.grade.d': 'Preparación del terreno, demolición y retiro de escombros, nivelación para drenaje e instalación de base — la base de cada trabajo.',
-
-    'cmp.kicker': '¿No sabes cuál elegir?',
     'cmp.title': '¿Asfalto o concreto?',
     'cmp.sub': 'Los dos son buenas opciones en Utah. Aquí va la versión rápida — en el estimado te damos una recomendación honesta para tu propiedad.',
     'cmp.asphalt': 'Asfalto',
@@ -80,8 +76,6 @@ window.GEO_I18N = {
     'cmp.c.maint': 'Bajo — resellar de vez en cuando',
     'cmp.c.ready': 'Unos 7 días',
     'cmp.c.best': 'Aceras, patios, acabados decorativos, larga duración',
-
-    'proc.kicker': 'Cómo trabajamos',
     'proc.title': 'Del estimado a tu driveway listo.',
     'proc.1.t': 'Estimado Gratis en tu Propiedad',
     'proc.1.d': 'Te visitamos, medimos, revisamos el drenaje y el suelo, y te damos una cotización clara por escrito.',
@@ -90,23 +84,30 @@ window.GEO_I18N = {
     'proc.3.t': 'Pavimentar o Colar',
     'proc.3.d': 'Asfalto caliente compactado y liso, o concreto reforzado con juntas colocadas para controlar las grietas.',
     'proc.4.t': 'Revisión Final y Cuidados',
+    'build.title': 'Construido desde la base.',
+    'build.sub': 'Un piso de concreto lleva ocho etapas, y casi todo lo que decide cuánto dura queda listo antes que la superficie. Los trabajos de asfalto empiezan igual: cimbra, nivel y una base compactada.',
+    'build.note': 'Las fotos ilustran cada etapa. No son fotos de obras de Geo; las cambiaremos por fotos reales conforme terminemos trabajos.',
+    'build.1.t': 'Cimbra a nivel',
+    'build.1.d': 'Se colocan y se nivelan las formas de madera a la altura final, con una ligera pendiente para que el agua se aleje de la casa.',
+    'build.2.t': 'Base compactada',
+    'build.2.d': 'La grava de base se tiende por capas y cada capa se compacta. Esto es lo que evita que el piso se hunda y se agriete.',
+    'build.3.t': 'Acero de refuerzo',
+    'build.3.d': 'La varilla se amarra en cuadrícula y se levanta sobre silletas, para que quede dentro del concreto y no sobre la tierra.',
+    'build.4.t': 'El colado',
+    'build.4.d': 'El concreto con aire incluido va directo del camión a la cimbra y se reparte antes de que empiece a fraguar.',
+    'build.5.t': 'Reglado',
+    'build.5.d': 'Una regla recta que se pasa sobre las formas deja la superficie plana y a la altura correcta.',
+    'build.6.t': 'Allanado',
+    'build.6.d': 'La llana cierra la superficie y asienta la piedra justo debajo, para una capa superior densa que resiste la sal.',
+    'build.7.t': 'Bordes y juntas',
+    'build.7.d': 'Los bordes redondeados no se despostillan. Las juntas de control deciden por dónde puede agrietarse el piso: en línea recta y sin que se note.',
+    'build.8.t': 'Acabado de escoba',
+    'build.8.d': 'Una última pasada con escoba deja una textura fina que da agarre cuando hay agua o hielo. Después, el concreto cura.',
+
     'proc.4.d': 'Inspección final juntos, limpieza e instrucciones sencillas para que tu superficie dure.',
-
-    'proj.kicker': 'Trabajos recientes',
-    'proj.title': 'Galería de proyectos',
-    'proj.cta': 'Empieza tu proyecto',
-    'proj.a': 'Driveway de Asfalto',
-    'proj.b': 'Acera de Concreto',
-    'proj.c': 'Patio Estampado',
-    'proj.d': 'Líneas de Estacionamiento',
-    'proj.e': 'Sellado de Asfalto',
-
-    'areas.kicker': 'Áreas de Servicio',
     'areas.title': 'Equipos locales en todo Utah County y más.',
     'areas.sub': 'Desde Utah Valley pavimentamos driveways y estacionamientos de Lehi hasta Payson. ¿No ves tu ciudad? Llámanos — lo más seguro es que sí llegamos.',
     'areas.call': 'Llama al',
-
-    'faq.kicker': 'Preguntas',
     'faq.title': 'Preguntas frecuentes',
     'faq.1.q': '¿Cuánto dura un driveway nuevo en Utah?',
     'faq.1.a': 'Con una base bien compactada y mantenimiento regular, un driveway de asfalto normalmente dura 15–20+ años y uno de concreto 25–30+ años. El drenaje y la preparación de la base son lo que más importa.',
@@ -142,6 +143,15 @@ window.GEO_I18N = {
     'form.submit': 'Solicitar mi Estimado Gratis',
     'form.err': 'Por favor escribe tu nombre y número de teléfono.',
     'form.ok': '¡Gracias! Te contactamos en menos de un día hábil.',
+    'form.ready': 'Listo. Todavía no se ha enviado — elige cómo mandárnoslo:',
+    'form.sending': 'Enviando…',
+    'form.failed': 'No se pudo enviar. Mándanoslo por mensaje o llámanos:',
+    'form.handoffLead': 'Esto abre tu propia app de mensajes o de correo con los datos ya escritos.',
+    'form.sendText': 'Mandar por mensaje',
+    'form.sendEmail': 'Mandar por correo',
+    'form.callInstead': 'Mejor llamar',
+    'form.smsIntro': 'Hola Geo Construction, quiero un estimado gratis:',
+    'form.mailSubject': 'Solicitud de estimado gratis',
     'opt.asphalt': 'Driveway de asfalto',
     'opt.concrete': 'Driveway de concreto',
     'opt.sidewalk': 'Acera / camino',
@@ -158,15 +168,26 @@ window.GEO_I18N = {
     'foot.contact': 'Contacto',
     'foot.lang': 'English y Español',
     'foot.rights': 'Todos los derechos reservados.',
+    'foot.photos': 'Las fotos de este sitio son ilustrativas, no fotos de obras de Geo.',
     'foot.licensed': 'Con licencia y seguro en el Estado de Utah',
 
+    'a11y.skip': 'Saltar al contenido principal',
     'aria.menuOpen': 'Abrir menú',
-    'aria.menuClose': 'Cerrar menú'
+    'aria.menuClose': 'Cerrar menú',
+    'aria.call': 'Llamar a Geo Construction al',
+    'aria.email': 'Escribir a Geo Construction a'
   },
   en: {
     'form.err': 'Please add your name and phone number.',
     'form.ok': "Thanks! We'll reach out within one business day.",
+    'form.ready': 'Ready. This has not been sent yet — pick how to send it:',
+    'form.sending': 'Sending…',
+    'form.failed': 'That did not send. Text us or call instead:',
+    'form.smsIntro': 'Hi Geo Construction, I would like a free estimate:',
+    'form.mailSubject': 'Free estimate request',
     'aria.menuOpen': 'Open menu',
-    'aria.menuClose': 'Close menu'
+    'aria.menuClose': 'Close menu',
+    'aria.call': 'Call Geo Construction at',
+    'aria.email': 'Email Geo Construction at'
   }
 };

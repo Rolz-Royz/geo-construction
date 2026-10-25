@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found | Geo Construction LLC</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <meta name="theme-color" content="#1a1a1a">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* This page has no language picker, so it says everything in both languages at once —
+       a lost visitor should not have to find a toggle before they can call. */
+    .lost { min-height: 100vh; display: grid; place-content: center; text-align: center; background: var(--asphalt); color: #fff; padding: 48px 24px; }
+    .lost__logo { width: min(280px, 70vw); margin: 0 auto 40px; }
+    .lost p.lost__code { font-family: var(--f-display); font-size: clamp(5rem, 22vw, 11rem); line-height: .85; color: var(--orange-300); margin: 0; letter-spacing: .02em; }
+    .lost__rule { width: 120px; height: 6px; margin: 28px auto; background: repeating-linear-gradient(-45deg, var(--orange-400) 0 12px, var(--asphalt) 12px 24px); }
+    .lost p { max-width: 46ch; margin: 0 auto 10px; color: #d6d2cb; }
+    .lost p + p { color: var(--orange-200); }
+    .lost__actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 36px; }
+  </style>
+</head>
+<body>
+  <main class="lost">
+    <img src="img/logo-white.png" width="591" height="300" alt="Geo Construction LLC — driveways, sidewalks, concrete work" class="lost__logo">
+    <p class="lost__code">404</p>
+    <div class="lost__rule" aria-hidden="true"></div>
+    <p>That page is gone — but the driveway still needs paving. Head back to the homepage or call us for a free estimate.</p>
+    <p lang="es">Esa página ya no existe — pero tu driveway sigue esperando. Vuelve al inicio o llámanos para un estimado gratis.</p>
+    <div class="lost__actions">
+      <a href="./" class="btn btn--yellow">Home / Inicio</a>
+      <a href="tel:+18015550199" class="btn btn--ghost" data-contact="tel"><span data-contact-num>(801) 555-0199</span></a>
+    </div>
+  </main>
+
+  <script src="config.js"></script>
+  <script>
+    // Same contact placeholders as the homepage, from the same single source.
+    (function () {
+      var cfg = window.GEO_CONFIG || {};
+      if (cfg.tel) document.querySelectorAll('a[data-contact="tel"]').forEach(function (a) { a.href = 'tel:' + cfg.tel; });
+      if (cfg.phone) document.querySelectorAll('[data-contact-num]').forEach(function (el) { el.textContent = cfg.phone; });
+    })();
+  </script>
+</body>
+</html>

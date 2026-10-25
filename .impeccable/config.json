@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "styles.css"
+        ],
+        "createdAt": "2026-09-17T22:13:51.987Z",
+        "reason": "Claude verified: no border-left/right exists anywhere in the project. The rule matches .svc--asphalt::before (a faded repeating road-paint dash inset at right:14%, the lane-line motif inside the asphalt-texture card) and .svc::after (a full-width left:0/right:0 bottom underline that wipes in on hover via scaleX). Neither is a one-sided card accent border."
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "styles.css"
+        ],
+        "createdAt": "2026-09-17T22:13:57.994Z",
+        "reason": "Claude verified against PRODUCT.md Brand Commitments: the palette is documented as an asphalt-black / concrete-gray ground derived from the logo orange #F15C04. --paper #f6f4ef, --concrete #e9e6df and --concrete-2 #d8d4cb are concrete tones for a concrete contractor, not a reflexive warm off-white."
+      }
+    ]
+  }
+}

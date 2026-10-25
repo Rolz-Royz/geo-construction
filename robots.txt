@@ -1,0 +1,5 @@
+# Geo Construction LLC — https://rolz-royz.github.io/geo-construction/
+User-agent: *
+Allow: /
+
+Sitemap: https://rolz-royz.github.io/geo-construction/sitemap.xml
